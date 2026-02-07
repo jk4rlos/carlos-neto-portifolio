@@ -3,25 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, User, Briefcase, Sun, Moon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export function Header() {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") as "dark" | "light" | null;
-    if (saved) {
-      setTheme(saved);
-      document.documentElement.classList.toggle("dark", saved === "dark");
-    }
-  }, []);
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-    localStorage.setItem("theme", next);
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const links = [
@@ -34,13 +23,13 @@ export function Header() {
     <header className="w-full h-28 flex items-center justify-center fixed z-10 bg-transparent dark:bg-transparent dark:from-black dark:via-[#071a2b] dark:to-black">
 
       <nav className="flex items-center gap-6 px-8 py-3 rounded-full 
-        bg-white/90 dark:bg-white/10 backdrop-blur-md border border-zinc-300 dark:border-white/20 shadow-lg dark:shadow-lg">
+        bg-white/90 dark:bg-white/10 backdrop-blur-md border border-zinc-300 dark:border-white/20 shadow-lg dark:shadow-lg transition-all duration-500 ease-in-out">
 
         {links.map(link => (
           <Link
             key={link.href}
             href={link.href}
-            className={`flex items-center gap-2 text-sm transition ${
+            className={`flex items-center gap-2 text-sm transition-all duration-500 ease-in-out ${
               pathname === link.href
                 ? "text-blue-600 dark:text-white"
                 : "text-zinc-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
@@ -53,7 +42,7 @@ export function Header() {
 
         <button
           onClick={toggleTheme}
-          className="ml-2 text-zinc-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition hover:cursor-pointer"
+          className="ml-2 text-zinc-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition-all duration-500 ease-in-out hover:cursor-pointer"
           aria-label="Toggle theme"
         >
           {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}

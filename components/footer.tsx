@@ -1,11 +1,11 @@
 "use client";
 
-import { Home, User, Briefcase, Code2, Linkedin,Github, Mail } from "lucide-react";
+import { Home, User, Briefcase, Linkedin,Github, Mail } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800 py-12 mt-20">
+    <footer className="py-12 mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <div>
@@ -21,7 +21,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <Home size={16} />
                   Home
@@ -30,7 +30,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <User size={16} />    
                   About
@@ -39,7 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/work"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <Briefcase size={16} />    
                   Work
@@ -56,7 +56,7 @@ export function Footer() {
                   href="https://github.com/carlosneto-dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <Github size={16} />
                   GitHub
@@ -64,10 +64,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/carlosneto-dev"
+                  href="https://www.linkedin.com/in/carlosneto-dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <Linkedin size={16} />
                   LinkedIn
@@ -76,9 +76,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:carlosneto.dev@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center gap-3 hover:translate-x-1"
+                  className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 ease-in-out flex items-center gap-3 hover:translate-x-1"
                 >
                   <Mail size={16} />
                   Email

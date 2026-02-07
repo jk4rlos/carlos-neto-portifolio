@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 pt-30 pb-20">
       <section className="text-center mb-20">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent transition-all duration-300 ease-in-out">
           Carlos Neto
         </h1>
         <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8">
